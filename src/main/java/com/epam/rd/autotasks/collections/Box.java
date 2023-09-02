@@ -1,6 +1,9 @@
 package com.epam.rd.autotasks.collections;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.math.BigDecimal;
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Box implements Cloneable {
@@ -22,6 +25,9 @@ public class Box implements Cloneable {
         this.cost = cost;
         this.city = city;
         this.office = office;
+    }
+
+    public Box() {
     }
 
     public int getId() {
@@ -88,6 +94,7 @@ public class Box implements Cloneable {
         this.office = office;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -118,4 +125,5 @@ public class Box implements Cloneable {
     public Box clone() throws CloneNotSupportedException {
         return (Box) super.clone();
     }
+
 }
